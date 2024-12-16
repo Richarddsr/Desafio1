@@ -17,7 +17,7 @@ def exibir_opcoes():
 
 root = tk.Tk()
 root.title("Widgets Avançados 🎨")
-root.geometry("800x800")
+root.state("zoomed")
 root.configure(bg="white")
 
 label_titulo = tk.Label(root, text="Selecione um item da lista", font=("Cardinal", 14), bg="white", fg = "purple")
@@ -39,7 +39,7 @@ itens = {"Python": "💠", "Java": "🖥️", "C++": "🤓", "Ruby": "❌", "Jav
 for item, emoji in itens.items():
    listbox.insert(tk.END, item)
 
-botao_exibir = tk.Button(root, text="Exibir Seleção", font=("Arial", 12), bg="green", fg="white", command=exibir_selecao)
+botao_exibir = tk.Button(root, text="Exibir Seleção", font=("Arial", 12), bg="lightgreen", fg="white", command=exibir_selecao)
 botao_exibir.pack(pady=10)
 
 label_resultado = tk.Label(root, text="", font=("Arial", 12), bg="white")
@@ -62,8 +62,8 @@ check2 = tk.Checkbutton(root, text="Auto Save", variable=var_check2, bg="white")
 check1.pack(padx=50)
 check2.pack(padx=50)
 
-botao_opcoes = tk.Button(root, text="Exibir Opções", font=("Arial", 12), bg="blue", fg="white", command=exibir_opcoes)
-botao_opcoes.pack(pady=10)
+botao_opcoes = tk.Button(root, text="Exibir Opções", font=("Arial", 12), bg="lightblue", fg="white", command=exibir_opcoes)
+botao_opcoes.pack(pady=20)
 
 label_opcoes = tk.Label(root, text="", font=("Arial", 12), bg="white")
 label_opcoes.pack(pady=10)
